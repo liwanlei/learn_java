@@ -12,6 +12,24 @@ public class NewTest {
 	  String result=beijing.ifpanduan(20);
 	  assertEquals(result, "beijing");
   }
+  @Test
+  public void be() {
+	  Ifstudy beijing = new Ifstudy();
+	  String result=beijing.ifpanduan(5);
+	  assertEquals(result, "beijing");
+  }
+  @Test
+  public void bee() {
+	  Ifstudy beijing = new Ifstudy();
+	  String result=beijing.ifpanduan(3);
+	  assertEquals(result, "shanghai");
+  }
+  @Test
+  public void bsse() {
+	  Ifstudy beijing = new Ifstudy();
+	  String result=beijing.ifpanduan(-1);
+	  assertEquals(result, "shenzhen");
+  }
   @BeforeTest
   public void beforeTest() {
   }
