@@ -1,41 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38" started-at="2018-04-24T01:11:04Z" finished-at="2018-04-24T01:11:04Z">
+  <suite name="Default suite" duration-ms="36" started-at="2018-04-24T02:12:55Z" finished-at="2018-04-24T02:12:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38" started-at="2018-04-24T01:11:04Z" finished-at="2018-04-24T01:11:04Z">
+    <test name="Default test" duration-ms="36" started-at="2018-04-24T02:12:55Z" finished-at="2018-04-24T02:12:55Z">
       <class name="com.jinjie.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="beforeTest" is-config="true" duration-ms="8" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.jinjie.NewTest@675d3402]" name="beforeTest" is-config="true" duration-ms="8" started-at="2018-04-24T10:12:55Z" finished-at="2018-04-24T10:12:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="be()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="be" duration-ms="6" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [beijing] but found [shanghai]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [beijing] but found [shanghai]at org.testng.Assert.fail(Assert.java:96)at org.testng.Assert.failNotEquals(Assert.java:776)at org.testng.Assert.assertEqualsImpl(Assert.java:137)at org.testng.Assert.assertEquals(Assert.java:118)at org.testng.Assert.assertEquals(Assert.java:453)at org.testng.Assert.assertEquals(Assert.java:463)at com.jinjie.NewTest.be(NewTest.java:19)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- be -->
-        <test-method status="PASS" signature="bee()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="bee" duration-ms="2" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bee -->
-        <test-method status="PASS" signature="bsse()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="bsse" duration-ms="1" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bsse -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="f" duration-ms="1" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
+        <test-method status="PASS" signature="f(int, java.lang.String)[pri:0, instance:com.jinjie.NewTest@675d3402]" name="f" duration-ms="6" started-at="2018-04-24T10:12:55Z" data-provider="datatestif" finished-at="2018-04-24T10:12:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[beijing]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.jinjie.NewTest@68be2bc2]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-04-24T09:11:04Z" finished-at="2018-04-24T09:11:04Z">
+        <test-method status="PASS" signature="f(int, java.lang.String)[pri:0, instance:com.jinjie.NewTest@675d3402]" name="f" duration-ms="1" started-at="2018-04-24T10:12:55Z" data-provider="datatestif" finished-at="2018-04-24T10:12:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanghai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(int, java.lang.String)[pri:0, instance:com.jinjie.NewTest@675d3402]" name="f" duration-ms="1" started-at="2018-04-24T10:12:55Z" data-provider="datatestif" finished-at="2018-04-24T10:12:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shenzhen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.jinjie.NewTest@675d3402]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-04-24T10:12:55Z" finished-at="2018-04-24T10:12:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
