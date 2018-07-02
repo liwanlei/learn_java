@@ -2,14 +2,11 @@
  * 
  */
 package com.jinjie;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import com.sun.org.apache.bcel.internal.generic.NEW;
-
 /**
  * @author lileilei
  *Test.java

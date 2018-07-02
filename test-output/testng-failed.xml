@@ -5,7 +5,7 @@
     <classes>
       <class name="com.jinjie.NewTest">
         <methods>
-          <include name="f"/>
+          <include name="be"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>

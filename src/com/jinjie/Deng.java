@@ -2,7 +2,6 @@
  * 
  */
 package com.jinjie;
-
 import com.sun.corba.se.impl.io.FVDCodeBaseImpl;
 
 /**

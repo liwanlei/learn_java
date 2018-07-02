@@ -1,7 +1,5 @@
 package com.jinjie;
-
 import sun.rmi.runtime.NewThreadAction;
-
 public class Dipxoamhcjemh  extends Thread{
 	private static int threadID = 0;
 	public Dipxoamhcjemh() {
