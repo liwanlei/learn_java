@@ -26,10 +26,8 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.xml.XmlSuite;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 public class ZTestReport implements IReporter {
 	
 	private String path = System.getProperty("user.dir")+File.separator+"report.html";
