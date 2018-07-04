@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package examples;
+import java.sql.SQLException;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 /**
  *
- * @author Administrator
+ * @author lileilei
  */
 public class reg extends javax.swing.JFrame {
 
@@ -26,7 +24,8 @@ public class reg extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+    	this.setTitle("新用户注册");
+        buttonGroup1 = new javax.swing.ButtonGroup();
         label1 = new java.awt.Label();
         textField2 = new java.awt.TextField();
         reg = new java.awt.Button();
@@ -34,13 +33,15 @@ public class reg extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         password = new javax.swing.JPasswordField();
         querenmima = new javax.swing.JPasswordField();
-
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        textField3 = new java.awt.TextField();
+        jLabel3 = new javax.swing.JLabel();
+        textField4 = new java.awt.TextField();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         label1.setText("用户名");
-
-        textField2.setText("textField1");
-
         reg.setActionCommand("注册");
         reg.setLabel("注册");
         reg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -48,87 +49,181 @@ public class reg extends javax.swing.JFrame {
                 regMouseClicked(evt);
             }
         });
-        reg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regActionPerformed(evt);
-            }
-        });
-
         label2.setText("确认密码");
-
         label3.setText("密码");
-
-        password.setText("jPasswordField1");
-
-        querenmima.setText("jPasswordField1");
-
+        jRadioButton1.setText("男");
+        jRadioButton2.setText("女");
+        jLabel1.setText("性别");
+        jLabel2.setText("答案");
+        jLabel3.setText("安全问题");
+        ButtonGroup buttonGroup=new ButtonGroup();
+        buttonGroup.add(jRadioButton1);
+        buttonGroup.add(jRadioButton2);
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(reg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(reg, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(querenmima, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(134, 134, 134)
+                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                .addGap(117, 117, 117))
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
+                            .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textField3, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(textField4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(querenmima, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                                        .addComponent(jRadioButton2)
+                                        .addGap(28, 28, 28)))))))
+                .addGap(93, 93, 93))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)))
+                        .addContainerGap()
+                        .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(querenmima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(reg, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 5, Short.MAX_VALUE)
+                        .addComponent(textField4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(reg, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
+	private void regMouseClicked(java.awt.event.MouseEvent evt) {                                 
+         String user_name=textField2.getText();
+         String pass_word=password.getText();
+         String pass_que=querenmima.getText();
+         String pormable=textField3.getText();
+         String anwser=textField4.getText();
+         String sex="";
+         if (jRadioButton1.isSelected()) {
+        	 sex="男";
+         }else if (jRadioButton2.isSelected()) {
+			sex="女";
+		}else {
+			sex="男";
+		};
+         if (user_name.length()<6) {
+        	 JOptionPane.showMessageDialog(null, "用户名不能长度不能少于6","注册不成功",JOptionPane.ERROR_MESSAGE);
+		}else if (user_name.length()>18) {
+       	 JOptionPane.showMessageDialog(null, "用户名不能长度不能大于18","注册不成功",JOptionPane.ERROR_MESSAGE);
+		}else {
+			if (pass_word.length()==0) {
+				JOptionPane.showMessageDialog(null, "密码不能为空","注册不成功",JOptionPane.ERROR_MESSAGE);
+			}
+			else if (pass_word.length()<6) {
+				JOptionPane.showMessageDialog(null, "密码不能小于6","注册不成功",JOptionPane.ERROR_MESSAGE);
+			}else if (pass_word.length()>18) {
+				JOptionPane.showMessageDialog(null, "密码不能长于18","注册不成功",JOptionPane.ERROR_MESSAGE);
+			}else {
+				if(pass_word.equals(pass_que)) {
+					if(pormable.length()<=0) {
+						JOptionPane.showMessageDialog(null, "安全问题不能为空，必须填写安全问题","注册不成功",JOptionPane.ERROR_MESSAGE);
+					}else {
+						if(anwser.length()<=0) {
+							JOptionPane.showMessageDialog(null, "安全答案必须填写","注册不成功",JOptionPane.ERROR_MESSAGE);
+						}else {
+							boolean m = reguser(user_name, pass_word,pormable,anwser, sex);
+							if (m) {
+								JOptionPane.showMessageDialog(null, "请登录","注册成功",JOptionPane.PLAIN_MESSAGE);
+								this.setVisible(false);
+								loginusername loginuser=new loginusername();
+								loginuser.setVisible(true);
+							}else {
+								JOptionPane.showMessageDialog(null, "稍后注册","注册不成功",JOptionPane.ERROR_MESSAGE);
+							}
+							
+						}
+					}
+				}else {
+					JOptionPane.showMessageDialog(null, "两次输入密码不相等","注册不成功",JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		}
+    }
+//注册用户，查询用户名是否在系统存在，用户名必须唯一。
+    private boolean reguser(String username,String password,
+    	String proable,String anwser,String sex) {
+    	Selectsql selsc	= new Selectsql();
+    	String sql_xuju="SELECT password FROM `user` WHERE username='"+username+"';";
+    	String reselt=selsc.Chaxun(sql_xuju,username);
+    	Makemd5 m = new Makemd5();
+		String mdStri=m.getMD5Str(password);
+    	String sql_add="insert into `user` (username,PASSWORD,sex,promble,anwser,status) values ('"+username+"','"+mdStri+"','"+sex+"','"+proable+"','"+anwser+"',"+0+")";
+    	if (reselt.equals("")) {
+    		String resu = null;
+			try {
+				resu = selsc.Adddate(sql_add);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		if (resu.equals("ok")) {
+    			return true;
+    		}else {
+    			return false;
+    		}
+    	}else {
+			return false;
+		}
+	}
 
-    private void regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regActionPerformed
-
-    private void regMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regMouseClicked
-
-    /**
+	/**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -145,17 +240,18 @@ public class reg extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(reg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new reg().setVisible(true);
             }
         });
     }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
@@ -163,5 +259,6 @@ public class reg extends javax.swing.JFrame {
     private javax.swing.JPasswordField querenmima;
     private java.awt.Button reg;
     private java.awt.TextField textField2;
-    // End of variables declaration//GEN-END:variables
+    private java.awt.TextField textField3;
+    private java.awt.TextField textField4;
 }
