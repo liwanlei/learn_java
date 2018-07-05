@@ -10,10 +10,13 @@ package examples;
 /**
  * 
  */
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
-
-import com.sun.corba.se.pept.transport.EventHandler;
 public class Selectsql {
 	public String Chaxun(String sql_xuju ,String ziduan) {
 		try {
@@ -41,29 +44,27 @@ public class Selectsql {
 		}
 		return "";	
 	}
-	public void Change() {
+	public String Change(String sql,Integer index,String password) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println("�쳣");
 		}
-		String url="jdbc:mysql://localhost:3306/beijing";//jabc��·��
+		String url="jdbc:mysql://localhost:3306/fangqq";
 		Connection connection;
 		try {
 			connection=DriverManager.getConnection(url, "root", "liwanlei");
 			Statement statement=connection.createStatement();
-			String sql="UPDATE student SET name=? WHERE id=?";
 			PreparedStatement preparedStatement=connection.prepareStatement(sql);
-			preparedStatement.setString(1, "liwanlei");
-			preparedStatement.setInt(2, 1);
+			preparedStatement.setString(index, password);
 			preparedStatement.executeUpdate();
-			System.out.println("ok");}
+			return "ok";
+			}
 		catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("�쳣");
+			e.printStackTrace();
 		}
+		return url;
 	}
 	public String Adddate(String sql) throws SQLException {
 		Date aDate=new Date();

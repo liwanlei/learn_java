@@ -1,16 +1,9 @@
 package examples;
-
-import java.awt.TextField;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-
-import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
-
-/**
- *
+/*
  * @author lileilei
  */
 public class loginusername extends javax.swing.JFrame {
@@ -37,7 +30,12 @@ public class loginusername extends javax.swing.JFrame {
         login.setLabel("安全登录");
         login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginMouseClicked(evt);
+                try {
+					loginMouseClicked(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
         jLabel1.setText("密码");
@@ -48,7 +46,12 @@ public class loginusername extends javax.swing.JFrame {
         		regMouseClicked(evt);
         	}
         });
-        resetpassword.setText("忘记密码");
+        resetpassword.setText("忘记");
+        resetpassword.addMouseListener(new java.awt.event.MouseAdapter() {
+        	public void mouseClicked(java.awt.event.MouseEvent evt) {
+        		resetpasswordMouseClicked(evt);
+        	}
+        });
         remberpassword.setText("记住密码");
         remberpassword.setToolTipText("");
         zidonglogin.setText("自动登录");
@@ -106,7 +109,6 @@ public class loginusername extends javax.swing.JFrame {
 		this.setVisible(false);
 		new reg().setVisible(true);
 	}
-
 	private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
@@ -115,11 +117,13 @@ public class loginusername extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_remberpasswordActionPerformed
 
-    private void resetpasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resetpasswordMouseClicked
-        System.out.println("重置密码");
+    private void resetpasswordMouseClicked(java.awt.event.MouseEvent evt) {
+        this.setVisible(false);
+        zhaopass zhaopas=new zhaopass();
+        zhaopas.setVisible(true);
     }
 //登录按钮
-    private void loginMouseClicked(java.awt.event.MouseEvent evt) {
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) throws IOException {
     	String  user_name=username.getText();
     	String  user_password=password.getText();
     	if (user_name.length()==0) {
@@ -143,6 +147,8 @@ public class loginusername extends javax.swing.JFrame {
 					this.setVisible(false);
 					shouye shouy = new shouye();
 					shouy.setVisible(true);
+					Readtext readtext=new Readtext();
+					readtext.wirte(user_name);
 				}else {
 					JOptionPane.showMessageDialog(null, "用户名或者密码错误","登录失败",JOptionPane.ERROR_MESSAGE);
 				};

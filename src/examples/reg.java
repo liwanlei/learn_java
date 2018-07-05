@@ -206,6 +206,15 @@ public class reg extends javax.swing.JFrame {
     		String resu = null;
 			try {
 				resu = selsc.Adddate(sql_add);
+				if(resu.equals("ok")) {
+					JOptionPane.showMessageDialog(null, "请登录","注册成功",JOptionPane.ERROR_MESSAGE);
+					this.setVisible(false);
+					loginusername lo_gin=new loginusername();
+					this.setVisible(true);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "请重新检查后再注册","注册失败",JOptionPane.ERROR_MESSAGE);
+				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

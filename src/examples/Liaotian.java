@@ -1,20 +1,18 @@
 package examples;
-import java.awt.Color;
 import java.awt.TextArea;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import javax.swing.JOptionPane;
-import javax.swing.border.LineBorder;
 /**
- *
  * @author lileilei
  */
 public class Liaotian extends javax.swing.JFrame {
-    public Liaotian() {
-        initComponents();
+    public Liaotian(String user_name) {
+        initComponents(user_name);
     }
     @SuppressWarnings("unchecked")
-    private void initComponents() {
+    private void initComponents(String user_name) {
         username = new javax.swing.JLabel();
         sendmessage = new javax.swing.JButton();
         textArea1 = new java.awt.TextArea(13,40);
@@ -22,7 +20,7 @@ public class Liaotian extends javax.swing.JFrame {
         list1.setEnabled(false);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         username.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        username.setText("聊天");
+        username.setText(user_name);
         sendmessage.setText("发送");
         sendmessage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -97,7 +95,7 @@ public class Liaotian extends javax.swing.JFrame {
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Liaotian().setVisible(true);
+                new Liaotian("usern").setVisible(true);
             }
         });
     }
