@@ -22,8 +22,6 @@ public class Selectsql {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
 			return "";	
 		}
 		String url="jdbc:mysql://localhost:3306/fangqq";

@@ -52,6 +52,7 @@ public class reg extends javax.swing.JFrame {
         label2.setText("确认密码");
         label3.setText("密码");
         jRadioButton1.setText("男");
+        jRadioButton1.setSelected(true);
         jRadioButton2.setText("女");
         jLabel1.setText("性别");
         jLabel2.setText("答案");

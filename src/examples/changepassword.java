@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Administrator
+ * @author lileilei
  */
 public class changepassword extends javax.swing.JFrame {
     /**
-     * Creates new form changepassword
+     * 修改密码
      */
     public changepassword() {
         initComponents();

@@ -7,7 +7,7 @@ package examples;
 
 /**
  *
- * @author Administrator
+ * @author lileilei
  */
 public class chaxun extends javax.swing.JFrame {
 
@@ -33,11 +33,8 @@ public class chaxun extends javax.swing.JFrame {
         list1 = new java.awt.List();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jLabel1.setText("用户名");
-
         textField1.setText("textField1");
-
         button1.setLabel("查找");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

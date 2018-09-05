@@ -74,6 +74,7 @@ public class Liaotian extends javax.swing.JFrame {
         	list1.appendText(ft.format(nDate)+'\n');
         	list1.appendText(message_send+'\n');
         	textArea1.setText("");
+        	//这个地方还应该去数据库去写入这个消息的数据
         }
     }
     public static void main(String args[]) {

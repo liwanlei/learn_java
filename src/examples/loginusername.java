@@ -1,4 +1,5 @@
 package examples;
+import java.awt.List;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 
@@ -12,6 +13,28 @@ public class loginusername extends javax.swing.JFrame {
      */
     public loginusername() {
         initComponents();
+        String usernam=Readtext.read();
+        String[] shuju=usernam.split(",");
+        if (shuju.length==1){
+        	username.setText(shuju[0].toString());
+        }else if (shuju.length>1) {
+			username.setText(shuju[0].toString());
+			password.setText(shuju[1].toString());
+			try {
+				
+			if (shuju[2].equals("1")) {
+				remberpassword.setSelected(true);
+			}
+			if (shuju[3].equals("1")) {
+				zidonglogin.setSelected(true);
+			}
+			}
+         catch (Exception e) {
+			// TODO: handle exception
+		}
+		}else {
+			
+		}
     }
     @SuppressWarnings("unchecked")
     private void initComponents() {
@@ -115,8 +138,7 @@ public class loginusername extends javax.swing.JFrame {
 
     private void remberpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remberpasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_remberpasswordActionPerformed
-
+    }
     private void resetpasswordMouseClicked(java.awt.event.MouseEvent evt) {
         this.setVisible(false);
         zhaopass zhaopas=new zhaopass();
@@ -126,6 +148,8 @@ public class loginusername extends javax.swing.JFrame {
     private void loginMouseClicked(java.awt.event.MouseEvent evt) throws IOException {
     	String  user_name=username.getText();
     	String  user_password=password.getText();
+    	boolean remeber=remberpassword.isSelected();
+    	boolean zidong=zidonglogin.isSelected();
     	if (user_name.length()==0) {
     		JOptionPane.showMessageDialog(null, "用户名不能为空","用户名不合法",JOptionPane.ERROR_MESSAGE);
     	}
@@ -133,7 +157,11 @@ public class loginusername extends javax.swing.JFrame {
     		JOptionPane.showMessageDialog(null, "用户名不能长度不能小于6","用户名不合法",JOptionPane.ERROR_MESSAGE);
     	}else if (user_name.length()>18) {
     		JOptionPane.showMessageDialog(null, "用户名不能长度不能长于18","用户名不合法",JOptionPane.ERROR_MESSAGE);
-		}else {
+		}
+    	else if (remeber==false && zidong==true) {
+    		JOptionPane.showMessageDialog(null, "自动登录必须记住密码","自动登录",JOptionPane.ERROR_MESSAGE);
+		}
+    	else {
 			if (user_password.length()==0) {
 				JOptionPane.showMessageDialog(null, "密码不能为空","密码不合法",JOptionPane.ERROR_MESSAGE);
 			}
@@ -148,7 +176,12 @@ public class loginusername extends javax.swing.JFrame {
 					shouye shouy = new shouye();
 					shouy.setVisible(true);
 					Readtext readtext=new Readtext();
-					readtext.wirte(user_name);
+					if(remeber ==true || zidong==true){
+						String remeber1=user_name+","+password+","+"1,1";
+						readtext.wirte(remeber1);
+					}else {
+						readtext.wirte(user_name);
+					}
 				}else {
 					JOptionPane.showMessageDialog(null, "用户名或者密码错误","登录失败",JOptionPane.ERROR_MESSAGE);
 				};
@@ -163,9 +196,12 @@ public class loginusername extends javax.swing.JFrame {
 		String shujuku=mysql.Chaxun(sql,ziduan);
 		Makemd5 m = new Makemd5();
 		String mdString=m.getMD5Str(user_password);
-		if (shujuku.equals(mdString)) {
+		if (shujuku.equals("")) {
+			return false;
+		}
+		else if (shujuku.equals(mdString)) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}

@@ -13,6 +13,11 @@ public class zhaopass extends javax.swing.JFrame {
      */
     public zhaopass() {
         initComponents();
+        String user= Readtext.read();
+        String[] uStrings=user.split(",");
+        if (uStrings.length>0) {
+			textField1.setText(uStrings[0]);
+		}
     }
     @SuppressWarnings("unchecked")
     private void initComponents() {
