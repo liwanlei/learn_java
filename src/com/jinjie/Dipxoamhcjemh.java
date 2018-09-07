@@ -1,5 +1,5 @@
 package com.jinjie;
-import sun.rmi.runtime.NewThreadAction;
+
 public class Dipxoamhcjemh  extends Thread{
 	private static int threadID = 0;
 	public Dipxoamhcjemh() {
@@ -14,12 +14,14 @@ public class Dipxoamhcjemh  extends Thread{
     public void run() {
         System.out.println(this);
     }
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		Dipxoamhcjemh dipxoamhcjemh=new Dipxoamhcjemh();
 		Dipxoamhcjemh dipxoamhcjemh2=new Dipxoamhcjemh();
+	
 		dipxoamhcjemh.start();
 		dipxoamhcjemh2.start();
+		
 	}
 
 }
