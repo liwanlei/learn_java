@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="10" parallel="false" thread-count="1">
+ <test name="Test1">
+  <classes>
+  <class name="com.jinjie.Test"/>
+   <class name=""/>
+  </classes>
+ </test>
+</suite>
