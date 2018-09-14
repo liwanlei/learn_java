@@ -7130,24 +7130,23 @@
     var resultData = {
   "testPass": 3,
   "testSkip": 0,
-  "totalTime": "13ms",
+  "totalTime": "28ms",
   "testAll": 4,
-  "beginTime": "2018-07-02 14:18:00.924",
+  "beginTime": "2018-09-11 16:26:22.358",
   "testResult": [
     {
-      "className": "com.jinjie.NewTest",
-      "methodName": "be",
-      "spendTime": "9ms",
+      "className": "java20.Test4",
+      "methodName": "testAssert2",
+      "spendTime": "13ms",
       "status": "失败",
       "log": [
-        "java.lang.AssertionError: expected [beijing] but found [shanghai]",
+        "java.lang.AssertionError: 比较两个数字是否相等 expected [2] but found [1]",
         "    org.testng.Assert.fail(Assert.java:96)",
         "    org.testng.Assert.failNotEquals(Assert.java:776)",
         "    org.testng.Assert.assertEqualsImpl(Assert.java:137)",
         "    org.testng.Assert.assertEquals(Assert.java:118)",
-        "    org.testng.Assert.assertEquals(Assert.java:453)",
-        "    org.testng.Assert.assertEquals(Assert.java:463)",
-        "    com.jinjie.NewTest.be(NewTest.java:19)",
+        "    org.testng.Assert.assertEquals(Assert.java:652)",
+        "    java20.Test4.testAssert2(Test4.java:17)",
         "    sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
         "    sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
         "    sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -7156,49 +7155,37 @@
         "    org.testng.internal.Invoker.invokeMethod(Invoker.java:571)",
         "    org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)",
         "    org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)",
-        "    org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)",
+        "    org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)",
         "    org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)",
-        "    org.testng.TestRunner.privateRun(TestRunner.java:648)",
-        "    org.testng.TestRunner.run(TestRunner.java:505)",
-        "    org.testng.SuiteRunner.runTest(SuiteRunner.java:455)",
-        "    org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)",
-        "    org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)",
-        "    org.testng.SuiteRunner.run(SuiteRunner.java:364)",
-        "    org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)",
-        "    org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)",
-        "    org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)",
-        "    org.testng.TestNG.runSuitesLocally(TestNG.java:1116)",
-        "    org.testng.TestNG.runSuites(TestNG.java:1028)",
-        "    org.testng.TestNG.run(TestNG.java:996)",
-        "    org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)",
-        "    org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)",
-        "    org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)"
+        "    java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)",
+        "    java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)",
+        "    java.lang.Thread.run(Thread.java:748)"
       ]
     },
     {
-      "className": "com.jinjie.NewTest",
-      "methodName": "bee",
+      "className": "java20.Test4",
+      "methodName": "testAssert1",
+      "spendTime": "13ms",
+      "status": "成功",
+      "log": []
+    },
+    {
+      "className": "java20.TestData",
+      "methodName": "testdemoe",
       "spendTime": "1ms",
       "status": "成功",
       "log": []
     },
     {
-      "className": "com.jinjie.NewTest",
-      "methodName": "bsse",
+      "className": "java20.TestData",
+      "methodName": "testdemoe",
       "spendTime": "1ms",
-      "status": "成功",
-      "log": []
-    },
-    {
-      "className": "com.jinjie.NewTest",
-      "methodName": "f",
-      "spendTime": "2ms",
       "status": "成功",
       "log": []
     }
   ],
   "testFail": 1,
-  "testName": "20180702141800888"
+  "testName": "20180911162622323"
 };
 
     function clickRow(obj){

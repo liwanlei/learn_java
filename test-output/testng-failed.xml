@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" verbose="10" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="2" verbose="10" name="Test1(failed)" parallel="methods">
     <classes>
       <class name="java20.Test4">
         <methods>
@@ -9,5 +9,5 @@
         </methods>
       </class> <!-- java20.Test4 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

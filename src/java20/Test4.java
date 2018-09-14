@@ -1,8 +1,9 @@
 package java20;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners({ZTestReport.class})
 public class Test4 {
   @Test
   public void testAssert1() {

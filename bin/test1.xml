@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" verbose="10" parallel="false" thread-count="1">
+<suite name="Suite" verbose="10" parallel="true" thread-count="2">
  <test name="Test1">
   <classes>
-  <class name="com.jinjie.Test"/>
-   <class name=""/>
+  <class name="java20.Test4"/>
+  <class name="java20.TestData"/>
   </classes>
  </test>
 </suite>
